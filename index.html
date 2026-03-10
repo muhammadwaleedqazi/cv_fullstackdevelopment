@@ -19,8 +19,10 @@
   }
 
   @media print {
-    body { background: white !important; }
-    .page { box-shadow: none !important; margin: 0 !important; border-radius: 0 !important; }
+    body { background: white !important; padding: 0 !important; }
+    .page { box-shadow: none !important; margin: 0 !important; border-radius: 0 !important; width: 100% !important; height: 100% !important; }
+    .sidebar { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
   }
 
   body {
@@ -38,11 +40,13 @@
     background: var(--paper);
     width: 794px;
     min-height: 1123px;
+    max-height: 1123px;
     box-shadow: 0 20px 60px rgba(0,0,0,0.18), 0 4px 12px rgba(0,0,0,0.1);
     border-radius: 2px;
     overflow: hidden;
     display: grid;
     grid-template-columns: 260px 1fr;
+    grid-template-rows: 1123px;
     position: relative;
   }
 
@@ -50,12 +54,21 @@
   .sidebar {
     background: var(--accent2);
     color: #e8e3db;
-    padding: 44px 28px 40px;
+    padding: 36px 28px 32px;
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 24px;
     position: relative;
     overflow: hidden;
+    align-self: stretch;
+  }
+  
+  .main {
+    padding: 36px 32px 32px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-self: stretch;
   }
 
   .sidebar::before {
@@ -200,10 +213,10 @@
 
   /* RIGHT MAIN */
   .main {
-    padding: 44px 36px 40px 36px;
+    padding: 36px 32px 32px 32px;
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: 20px;
   }
 
   .summary-block {
@@ -246,8 +259,8 @@
   }
 
   .project-item {
-    margin-bottom: 18px;
-    padding-bottom: 18px;
+    margin-bottom: 13px;
+    padding-bottom: 13px;
     border-bottom: 1px solid var(--rule);
     position: relative;
   }
@@ -511,7 +524,7 @@
             <div class="project-name">OptifyUp Website</div>
             <span class="project-badge badge-freelance">Freelance · Live</span>
           </div>
-          <a class="project-link" href="https://optifyup.com">↗ optifyup.com</a>
+          <a class="project-link" href="https://optifyup.com" target="_blank">↗ optifyup.com</a>
           <div class="project-stack">
             <span class="stack-tag">HTML5</span>
             <span class="stack-tag">CSS3</span>
@@ -532,7 +545,7 @@
             <div class="project-name">Gamers Den</div>
             <span class="project-badge badge-project">Frontend · AICT Project</span>
           </div>
-          <a class="project-link" href="https://muhammadwaleedqazi.github.io/AICT_FINAL_PROJECT/">↗ https://muhammadwaleedqazi.github.io/AICT_FINAL_PROJECT/</a>
+          <a class="project-link" href="https://muhammadwaleedqazi.github.io/AICT_FINAL_PROJECT/" target="_blank">↗ muhammadwaleedqazi.github.io/AICT_FINAL_PROJECT</a>
           <div class="project-stack">
             <span class="stack-tag">HTML5</span>
             <span class="stack-tag">CSS3</span>
@@ -590,6 +603,37 @@
           <span class="interest-pill">Artificial Intelligence</span>
           <span class="interest-pill">Open Source</span>
           <span class="interest-pill">Software Engineering</span>
+        </div>
+      </div>
+
+      <!-- RELEVANT COURSEWORK -->
+      <div class="section">
+        <div class="section-header">
+          <span class="section-title">Relevant Coursework</span>
+          <div class="section-line"></div>
+        </div>
+        <div class="interests-row">
+          <span class="interest-pill">Programming Fundamentals</span>
+          <span class="interest-pill">Object Oriented Programming</span>
+          <span class="interest-pill">Data Structures & Algorithms</span>
+          <span class="interest-pill">Computer Organization & Assembly</span>
+          <span class="interest-pill">Database Systems</span>
+          <span class="interest-pill">Applied ICT</span>
+        </div>
+      </div>
+
+      <!-- SOFT SKILLS -->
+      <div class="section">
+        <div class="section-header">
+          <span class="section-title">Soft Skills</span>
+          <div class="section-line"></div>
+        </div>
+        <div class="interests-row">
+          <span class="interest-pill">Problem Solving</span>
+          <span class="interest-pill">Fast Learner</span>
+          <span class="interest-pill">Teamwork</span>
+          <span class="interest-pill">Attention to Detail</span>
+          <span class="interest-pill">Communication</span>
         </div>
       </div>
 
